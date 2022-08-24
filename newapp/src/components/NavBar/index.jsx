@@ -6,7 +6,7 @@ import CartWidget from "../CartWidget";
 function NavBar ({titulo, comision, color}){
   return (
     <>
-      <h1 style={{background:color}}> {titulo} {comision} {color} </h1>
+     {/* <h1 style={{background:color}}> {titulo} {comision} {color} </h1>*/}
  
     <ul style= {{width: "100%"}}>
       <li>
@@ -23,9 +23,13 @@ function NavBar ({titulo, comision, color}){
       <li>
         <a href="#about">About</a>
       </li>
+      <li>
       <CartWidget/>
+      </li>
     </ul>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A optio nemo, incidunt exercitationem molestias cumque perspiciatis quas doloremque quasi rerum delectus facere, sint quis, ipsam consequuntur et tempora officia sunt?</p>
+    <p>
+Mi Casa Revista <br />
+Los accesorios más prácticos para poner orden en casa - </p>
     
     </>
   );

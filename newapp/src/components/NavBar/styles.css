@@ -23,5 +23,13 @@ ul {
   }
 
 h1 {
-  color: aquamarine;
+  color: rgb(174, 191, 186);
+  font-size: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+  color: rgb(213, 158, 181);
+  font-size: 1.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

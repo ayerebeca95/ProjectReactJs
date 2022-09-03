@@ -1,30 +1,32 @@
 import React from "react";
 import "./styles.css";
 import CartWidget from "../CartWidget";
+import { NavLink } from "react-router-dom";
 
 
-function NavBar ({titulo, comision, color}){
+export const NavBar = ()=>{
   return (
     <>
-     {/* <h1 style={{background:color}}> {titulo} {comision} {color} </h1>*/}
- 
     <ul style= {{width: "100%"}}>
       <li>
-        <a href="#home">
+        <NavLink to='/'>
           Home
-        </a>
+        </NavLink>
       </li>
       <li>
-        <a href="#news">News</a>
+        <NavLink to="/categoria/films">Muebles</NavLink>
       </li>
       <li>
-        <a href="#contact">Contact</a>
+        <NavLink to="/categoria/series">Accesorios</NavLink>
       </li>
       <li>
-        <a href="#about">About</a>
+        <NavLink to="/contacto">Contacto</NavLink>
       </li>
+      
       <li>
+      <NavLink to='cart'>Carrito
       <CartWidget/>
+      </NavLink>
       </li>
     </ul>
     <p>

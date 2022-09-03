@@ -1,14 +1,15 @@
 import './item.css';
 import React from 'react';
 //import alfombra1 from '../../assets/alfombra1.jpg';
+import { Link } from "react-router-dom";
 
 
 const Item = ({info}) => {
     return(
-    <a href=" " className= "film">
-        <img src={info.image} alt= "alfombra1" width="50%"/>
+    <Link to={`/detalle/${info.id}`}  className= "film">
+        <img src={info.image} alt= "" />
     <p>{info.title} </p>
-    </a>
+    </Link>
     );
 }
 

@@ -29,10 +29,7 @@ export const NavBar = ()=>{
       </NavLink>
       </li>
     </ul>
-    <p>
-Mi Casa Revista <br />
-Los accesorios más prácticos para poner orden en casa - </p>
-    
+
     </>
   );
 };

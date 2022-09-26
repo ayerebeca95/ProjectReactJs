@@ -4,33 +4,31 @@ import CartWidget from "../CartWidget";
 import { NavLink } from "react-router-dom";
 
 
+
 export const NavBar = ()=>{
   return (
-    <>
+    <div className= 'container'>
     <ul style= {{width: "100%"}}>
       <li>
-        <NavLink to='/'>
+        <NavLink className="nav__link" to='/' >
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/categoria/films">Muebles</NavLink>
-      </li>
-      <li>
-        <NavLink to="/categoria/series">Accesorios</NavLink>
-      </li>
-      <li>
-        <NavLink to="/contacto">Contacto</NavLink>
-      </li>
       
       <li>
-      <NavLink to='cart'>Carrito
+        < NavLink className="nav__link" to='/categoria/piscina' > Piscina</NavLink>
+      </li>
+      <li>
+        <NavLink className="nav__link" to='/categoria/jacuzzi' > Jacuzzi</NavLink>
+      </li>
+      <li>
+      <NavLink className="nav__link" to='cart'>Carrito
       <CartWidget/>
       </NavLink>
       </li>
     </ul>
 
-    </>
+    </div>
   );
 };
 
@@ -41,18 +39,3 @@ export default NavBar;
 
 
 
-//AFTER CLASE CON PROFE
-/*import "./Alerta.scss";
-import Button from "react-boostrap/"
-function Alerta() {
-    return(
-        <div className="alerta-contenedor">
-            <p className="alerta-parrafo">parrafo</p>
-            <img src="" alt=""/>
-            <h1 style={{color:"green"}}>TITULO</h1>
-            <Button></Button>
-        </div>
-    )
-}
-
-export default Alerta;*/

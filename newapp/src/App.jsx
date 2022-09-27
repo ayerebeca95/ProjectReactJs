@@ -10,7 +10,6 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import CartProvider from "./context/CartContext";
 
 
-
 function App() {
   return (
    <>
@@ -22,6 +21,8 @@ function App() {
       <Route path="/categoria/:categoriaId" element={<ItemListContainer />} /> 
       <Route path="/cart" element={<Cart />} /> 
       <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />  
+      <Route path="/firebase" element={< paginaFirebase/>} />  
+      
       </Routes> 
       </CartProvider>
       </BrowserRouter> 

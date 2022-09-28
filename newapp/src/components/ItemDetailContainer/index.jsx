@@ -1,7 +1,7 @@
-import { useEffect} from 'react';
-//import { getFirestore, doc, getDoc } from "firebase/firestore";
-//import ItemDetail from "../ItemDetail";
-//import { useParams } from "react-router-dom";
+import React, { useEffect, useState} from 'react';
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import ItemDetail from "../ItemDetail";
+import { useParams } from "react-router-dom";
 //import piscina1  from "../../assets/piscina1.jpg";
 //import piscina2  from "../../assets/piscina2.jpg";
 //import piscina3  from "../../assets/piscina3.jpg";
@@ -11,16 +11,16 @@ import { useEffect} from 'react';
 
 
 export const ItemDetailContainer = () => {
- // const [data, setData] = useState({});
-  //const {detalleId} = useParams();
+ const [data, setData] = useState({});
+ const {detalleId} = useParams();
 
   useEffect(() => {
-   // const querydb = getFirestore();
-    //const queryDoc = doc(querydb,'items')
-    
-  }, [])
+    const querydb = getFirestore();
+    const queryDoc = doc(querydb,'items', detalleId)
+    getDoc(queryDoc).then(res => setData({ id:res.id, ...res.data() }))
+  }, [detalleId])
   return (
-    {/*<ItemDetail data={data} />*/}
+    <ItemDetail data={data} />
   )
 }
 
